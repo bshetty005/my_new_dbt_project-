@@ -1,1 +1,1 @@
-select * from snowflake_sample_data.TPCH_SF1.customer
+select * from {{source("my_source","CUSTOMER")}}
