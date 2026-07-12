@@ -6,3 +6,9 @@ sources:
       - name: "CUSTOMER"
       - name: "ORDERS"
       - name: "REGION"
+
+  - name: "src"
+    database: "MY_DB"
+    schema: "MY_SCHEMA"
+    tables:
+      - name: "orders"
