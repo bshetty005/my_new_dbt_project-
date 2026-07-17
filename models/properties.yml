@@ -12,3 +12,4 @@ sources:
     schema: "MY_SCHEMA"
     tables:
       - name: "orders"
+      - name: "cust"
