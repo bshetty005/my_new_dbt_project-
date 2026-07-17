@@ -13,3 +13,4 @@ sources:
     tables:
       - name: "orders"
       - name: "cust"
+      - name: "orders_inc"

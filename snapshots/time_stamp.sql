@@ -1,14 +1,14 @@
-{%snapshot customer_snapshot%}
+{%snapshot customer_snapshot %}
 {{
         config(
                 unique_key = "cust_id",
-                startegy = "timestamp",
+                strategy = "timestamp",
                 updated_at = "updated_at"
         )
 }}
 
 
-select * from {{sorce("src","cust")}}
+select * from {{source("src","cust")}}
 
 {%endsnapshot%}
 
