@@ -1,0 +1,48 @@
+sources:
+  - name: "my_source"
+    database: "SNOWFLAKE_SAMPLE_DATA"
+    schema: "TPCH_SF1"
+    tables:
+      - name: "CUSTOMER"
+      - name: "ORDERS"
+      - name: "REGION"
+
+  - name: "src"
+    database: "MY_DB"
+    schema: "MY_SCHEMA"
+    tables:
+      - name: "orders"
+      - name: "cust"
+      - name: "orders_inc"
+
+  - name: "prod"
+    database: "test"
+    schema: "test"
+    tables:
+      - name: "pii_row"    
+models:
+  - name: "pii"
+    columns:
+      - name: id
+        tests:
+         - unique
+          - not_null
+      - name: gender
+        tests:
+           - accepted_values:
+              arguments:
+               values : ['Male','Female']
+  - name:  "pii_bkp"
+    columns:
+    - name: id
+    tests:
+     - relationships:
+        arguments:
+         to: ref('pii')
+         field: id
+  - name:  "pii_bkp"
+    columns:
+    - name: age
+    tests:
+      - cust_test
+

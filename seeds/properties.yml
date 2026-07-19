@@ -1,0 +1,8 @@
+seeds:
+  - name: mapping
+    description: "this is my mapping file for countries"
+    config: 
+     column_types:
+      country: varchar
+      sales: integer 
+
