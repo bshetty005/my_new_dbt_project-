@@ -6,11 +6,11 @@
 
 
 select order_id,
-customer_name,product,
+cust_name,product,
 amount,
 order_datetime,
 '{{invocation_id}}' as dbt_invocation_id
-from {{source("src","orders")}}
+from {{source("src","orders_inc")}}
 
 
 {% if is_incremental() %}
