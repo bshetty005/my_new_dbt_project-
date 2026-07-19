@@ -32,3 +32,13 @@ models:
            - accepted_values:
               arguments:
                values : ['Male','Female']
+  - name:  "pii_bkp"
+    columns:
+    - name: id
+    tests:
+     - relationships:
+        arguments:
+         to: ref('pii')
+         field: id
+
+
