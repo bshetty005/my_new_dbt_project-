@@ -14,3 +14,9 @@ sources:
       - name: "orders"
       - name: "cust"
       - name: "orders_inc"
+
+  - name: "prod"
+    database: "test"
+    schema: "test"
+    tables:
+      - name: "pii_row"    
