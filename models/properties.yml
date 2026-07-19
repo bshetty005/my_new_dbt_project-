@@ -40,5 +40,9 @@ models:
         arguments:
          to: ref('pii')
          field: id
-
+  - name:  "pii_bkp"
+    columns:
+    - name: age
+    tests:
+      - cust_test
 
