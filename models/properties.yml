@@ -20,3 +20,11 @@ sources:
     schema: "test"
     tables:
       - name: "pii_row"    
+models:
+  - name: "pii"
+    columns:
+      - name: id
+        tests:
+         - unique
+          - not_null
+          argumentsargumentsdescriptiondescriptioncolumn_namecolumn_nameargumentsarguments
