@@ -27,4 +27,8 @@ models:
         tests:
          - unique
           - not_null
-          argumentsargumentsdescriptiondescriptioncolumn_namecolumn_nameargumentsarguments
+      - name: gender
+        tests:
+           - accepted_values:
+              arguments:
+               values : ['Male','Female']
